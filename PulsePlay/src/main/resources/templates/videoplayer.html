@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        color: red;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    body{
+        background-color: black;
+    }
+    .video{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        color: white;
+    }
+    .movie-title{
+        display: flex;
+        justify-content: center;
+    }
+    h4{
+        color: red;
+        font-size: xx-large;
+    }
+    button{
+        background-color: rgba(33, 119, 218, 0.945);
+        height: 40px;
+        width: 120px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: larger;
+    }
+</style>
+<body>
+    <div>
+        <h2>PULSEPLAY</h2>
+    </div>
+    <div class="video">
+        <video th:src="${ids}" controls preload="none" width="600px" height="400px"></video>
+    </div>
+    <div class="movie-title">
+        <h1 style="font-size: 44px; font-weight: bolder;" th:text="${name}"></h1>
+    </div>
+    <div class="cast">
+        <h4>Cast : <span style="color: white;" th:text="${cast}"></span></h4>
+        <h4>Year : <span style="color: white;" th:text="${year}"></span></h4>
+        <h4>Likes : <span style="color: white;" th:text="${likes}"></span></h4>
+        <h3 style="color: whitesmoke;">Please Give Rating To The Movie By 
+        Hitting Like Button Below</h3>
+        <button type="button">LIKE</button>
+    </div>
+</body>
+</html>

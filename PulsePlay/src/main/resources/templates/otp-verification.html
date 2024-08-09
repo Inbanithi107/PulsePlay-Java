@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification Form</title>
+    <link rel="stylesheet" href="/otp-verification.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="/otp-verification.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h3 style="text-align: center;">Otp sent to the mail <h3 th:text="${email}"></h3></h3>
+      <h4>Enter OTP Code</h4>
+      <form action="/otp-verify" method="post">
+        <div class="input-field">
+          <input type="text" name="onenumber" />
+          <input type="text" disabled name="twonumber" />
+          <input type="text" disabled name="threenumber" />
+          <input type="text" disabled name="fournumber"/>
+          <input type="text" disabled name="fivenumber"/>
+          <input type="text" disabled name="sixnumber"/>
+        </div>
+        <button>Verify OTP</button>
+      </form>
+    </div>
+  </body>
+</html>
